@@ -1,7 +1,8 @@
 "use strict";
-// import { Router } from "express";
-// import { CreateAppointment } from "../Controllers/appointment";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const appointment_1 = require("../Controllers/appointment");
 // import { VerifyToken } from "../Middlewares/verifyToken";
-// const router = Router();
-// router.post('/',CreateAppointment)
-// export default router;
+const router = (0, express_1.Router)();
+router.post('/', appointment_1.CreateAppointment);
+exports.default = router;
