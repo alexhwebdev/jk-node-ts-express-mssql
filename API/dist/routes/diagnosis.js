@@ -1,9 +1,10 @@
 "use strict";
-// import { Router } from "express";
-// import { createDiagnosis, getDiagnosisForUser, updateDiagnosis } from "../Controllers/diagnosis";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const diagnosis_1 = require("../Controllers/diagnosis");
 // import { VerifyToken } from "../Middlewares/verifyToken";
-// const router = Router();
-// router.post('/',createDiagnosis);
-// router.put('/:id',updateDiagnosis);
-// router.post('/user',getDiagnosisForUser)
-// export default router;
+const router = (0, express_1.Router)();
+router.post('/', diagnosis_1.createDiagnosis);
+router.put('/:id', diagnosis_1.updateDiagnosis);
+router.post('/user', diagnosis_1.getDiagnosisForUser);
+exports.default = router;
