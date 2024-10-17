@@ -13,7 +13,12 @@ exports.CreateAppointment = void 0;
 // import Connection from "../Helpers/database"
 // const db = new Connection();
 const CreateAppointment = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { patient_name, doctor_email, date, patient_email } = req.body;
+    // const { 
+    //   patient_name,
+    //   doctor_email,
+    //   date,
+    //   patient_email
+    // } = req.body;
     try {
         // await db.exec('addAppointment',{patient_name,doctor_email,date,patient_email});
         res.status(201).json({ message: "appointment has been created successfully" });

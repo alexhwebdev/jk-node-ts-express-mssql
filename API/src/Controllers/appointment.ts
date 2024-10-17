@@ -3,12 +3,12 @@ import { Response, Request } from "express"
 // const db = new Connection();
 
 export const CreateAppointment = async(req:Request,res:Response) =>{
-  const { 
-    patient_name,
-    doctor_email,
-    date,
-    patient_email
-  } = req.body;
+  // const { 
+  //   patient_name,
+  //   doctor_email,
+  //   date,
+  //   patient_email
+  // } = req.body;
 
   try {
     // await db.exec('addAppointment',{patient_name,doctor_email,date,patient_email});

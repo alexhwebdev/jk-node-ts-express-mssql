@@ -3,7 +3,12 @@ import express, { NextFunction, Request, Response,
 } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-// import { appointmentRoute, diagnosisRoute, patientRoute, userRoute } from "./routes";
+import { 
+  appointmentRoute, 
+  diagnosisRoute, 
+  patientRoute, 
+  userRoute 
+} from "./routes";
 
 const app = express();
 dotenv.config();
@@ -13,10 +18,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT;
 
-// app.use('/api/diagnosis',diagnosisRoute)
-// app.use('/api/users',userRoute);
-// app.use('/api/patients',patientRoute);
-// app.use('/api/appointments',appointmentRoute)
+app.use('/api/diagnosis', diagnosisRoute)
+app.use('/api/users', userRoute);
+app.use('/api/patients', patientRoute);
+app.use('/api/appointments', appointmentRoute)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
